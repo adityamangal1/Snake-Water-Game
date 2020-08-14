@@ -2,41 +2,41 @@
 #include <stdlib.h>
 #include <time.h>
 
-int snakewater(char you, char opp)
+int snakewater(char user, char opp)
 {
 
-    if (you == opp)
+    if (user == opp)
 
     {
         return 0; /* code */
     }
 
-    if (you == 's' && opp == 'w')
+    if (user == 's' && opp == 'w')
     {
         return 1; /* code */
     }
 
-    else if (you == 'w' && opp == 's')
+    else if (user == 'w' && opp == 's')
     {
 
         return -1;
     }
-    if (you == 'g' && opp == 's')
+    if (user == 'g' && opp == 's')
     {
         return 1; /* code */
     }
-    else if (you == 's' && opp == 'g')
+    else if (user == 's' && opp == 'g')
     {
 
         return -1;
     }
 
-    if (you == 'w' && opp == 'g')
+    if (user == 'w' && opp == 'g')
     {
         return 1; /* code */
     }
 
-    else if (you == 'g' && opp == 'w')
+    else if (user == 'g' && opp == 'w')
     {
 
         return -1;
@@ -46,7 +46,7 @@ int snakewater(char you, char opp)
 int main()
 {
 
-    char you, opp;
+    char user, opp;
 
     // srand(time 0);
     srand(time(0));
@@ -66,10 +66,10 @@ int main()
         opp = 'g';
     }
 
-    int result = snakewater(you, opp);
     printf("WELCOME! \n");
     printf("Enter 's' for snake , 'w' for water and 'g' for gun: \n");
-    scanf("%c", &you);
+    scanf("%c", &user);
+    int result = snakewater(user, opp);
     if (result == 0)
 
     {
@@ -89,7 +89,7 @@ int main()
         /* code */
     }
 
-    printf("You Choose %c and your opponent choose %c\n", you, opp);
+    printf("You Choose %c and your opponent choose %c\n", user, opp);
 
     return 0;
 }
