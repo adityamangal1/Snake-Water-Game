@@ -1,4 +1,5 @@
 # SnakeWater_Game.c
+
 Snakewatergun game by the use of c programming language and functions.
 </p> 
 <p align="center"><img src="https://img.shields.io/badge/Author-adityamangal-green.svg"> 
